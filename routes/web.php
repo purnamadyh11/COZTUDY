@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,7 @@ Route::get('/', function () {
 
 include __DIR__.'/back-office.php';
 include __DIR__.'/frontend.php';
+
+// payment
+Route::post('/payment', [PaymentController::class, 'createTransaction']);
+Route::post('/payment/notification', [PaymentController::class, 'notificationHandler']);
