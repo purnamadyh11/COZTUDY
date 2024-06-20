@@ -14,7 +14,6 @@ class CartController extends Controller
 {
     public function index(){
         $data = Cart::with('cartDetail.place.placeDetails')->where('user_id', Auth::user()->id)->where('status', 0)->orderBy('id', 'desc')->get();
-
         $transaction = Transaction::where('user_id', Auth::user()->id)->where('status', 0)->orderBy('id','desc')->get();
         $transactiondone = Transaction::where('user_id', Auth::user()->id)->where('status', 2)->orderBy('updated_at','desc')->get();
         return view('frontend/cart', ['data' => $data, 'transaction' => $transaction, 'transactiondone' => $transactiondone]);

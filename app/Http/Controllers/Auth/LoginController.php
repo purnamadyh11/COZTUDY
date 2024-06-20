@@ -26,7 +26,10 @@ class LoginController extends Controller
         ];
 
         if (Auth::Attempt($data)) {
-            if (Auth::user()->role == 1) {
+            if (Auth::user()->role == 1) {    
+                // misal di suatu saat, ada yang tanya ini buat apa?
+                // jawab : ini untuk pengecekan role user, jika role nya adalah 1 maka akan ke halaman admin
+                // begitupun sebalik e, jika role bernilai 0 maka akan ke halaman depan
                 return redirect('/admin/home');
             }
 

@@ -19,24 +19,24 @@
           @foreach ($data as $item)
             <div class="list-cart">
               <!-- Keperluan post -->
-              <input type="hidden" name="place_id[]" value="{{ $item->cartDetail[0]->place->id }}">
-              <input type="hidden" name="price[]" value="{{ $item->cartDetail[0]->place->price }}">
+              <input type="hidden" name="place_id[]" value="{{ @$item->cartDetail[0]->place->id }}">
+              <input type="hidden" name="price[]" value="{{ @$item->cartDetail[0]->place->price }}">
               <div class="row mb-5">
                 <div class="col-12 trending-items">
                   <div class="item p-4">
                     <h4><button type="button" data-id="{{ $item->id }}" class="btn btn-sm btn-danger delete-item"><i class="fa fa-times"></i></button> {{ $item->code }}</h4>
                     <div class="row mt-2">
                       <div class="col-2">
-                        <img class="rounded" src="{{ $item->cartDetail[0]->place->placeDetails[0]->images }}" alt="">
+                        <img class="rounded" src="{{ @$item->cartDetail[0]->place->placeDetails[0]->images }}" alt="">
                       </div>
                       <div class="col">
-                        <h5 class="fw-bold">{{ $item->cartDetail[0]->place->name }}</h5>
-                        {!! $item->cartDetail[0]->place->description !!}
+                        <h5 class="fw-bold">{{ @$item->cartDetail[0]->place->name }}</h5>
+                        {!! @$item->cartDetail[0]->place->description !!}
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-12">
-                        <br><span class="price bg-success text-white rounded p-2">{{ "Rp ".str_replace(",", ".", number_format($item->cartDetail[0]->place->price)) }}</span>
+                        <br><span class="price bg-success text-white rounded p-2">{{ "Rp ".str_replace(",", ".", number_format(@$item->cartDetail[0]->place->price)) }}</span>
                       </div>
                     </div>
                   </div>
