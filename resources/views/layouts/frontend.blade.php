@@ -56,7 +56,7 @@ https://templatemo.com/tm-589-lugx-gaming
                     <!-- ***** Logo Start ***** -->
                     <a href="/" class="logo">
                         {{-- <img src="{{ asset('frontend') }}/assets/images/logo.png" alt="" style="width: 158px;"> --}}
-                        <h1 style="font-size: 23px">RentalKu</h1>
+                        <h1 style="font-size: 23px">Coztudy</h1>
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
@@ -86,7 +86,7 @@ https://templatemo.com/tm-589-lugx-gaming
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>Copyright © {{ date('Y') }} StudioProjectID <a rel="nofollow" href="https://templatemo.com" target="_blank">Design: TemplateMo</a></p>
+        <p>Copyright © <a rel="nofollow" href="https://templatemo.com" target="_blank">Design: TemplateMo</a></p>
       </div>
     </div>
   </footer>
